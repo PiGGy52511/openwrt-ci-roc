@@ -174,7 +174,9 @@ jobs:
             find "$dir" -type f -exec touch {} +
           done
         fi
-
+    - name: Add mihomo feed
+      run: echo "src-git mihomo https://github.com/morytyann/OpenWrt-mihomo.git;main" >> feeds.conf.default
+      
     - name: Install Feeds(安装feeds)
       run: |
         cd "$OPENWRT_PATH"
