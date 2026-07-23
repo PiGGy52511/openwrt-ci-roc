@@ -175,16 +175,16 @@ jobs:
           done
         fi
    
-    - name: Add mihomo feed
+    - name: Add nikki feed
       run: |
         cd "$OPENWRT_PATH"
-        echo "src-git mihomo https://github.com/morytyann/OpenWrt-mihomo.git;main" >> feeds.conf.default
+        echo "src-git nikki https://github.com/nikkinikki-org/OpenWrt-nikki.git;main" >> feeds.conf.default
         cat feeds.conf.default   # 验证写入成功，可选
         
-    - name: Clone mihomo manually
+    - name: Clone nikki manually
       run: |
           cd "$OPENWRT_PATH"
-          git clone https://github.com/morytyann/OpenWrt-mihomo.git package/mihomo
+          git clone https://github.com/nikkinikki-org/OpenWrt-nikki.git package/nikki
       
     - name: Install Feeds(安装feeds)
       run: |
