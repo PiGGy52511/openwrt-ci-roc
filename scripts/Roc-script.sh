@@ -59,6 +59,7 @@ git clone --depth=1 https://github.com/jerrykuku/luci-theme-argon feeds/luci/the
 git clone --depth=1 https://github.com/eamonxg/luci-theme-aurora feeds/luci/themes/luci-theme-aurora
 git clone --depth=1 https://github.com/makeding/luci-app-wolh package/huggy/luci-app-wolh
 echo "src-git nikki https://github.com/nikkinikki-org/OpenWrt-nikki.git;main" >> "feeds.conf.default"
+./scripts/feeds update nikki 
 
 ./scripts/feeds update -i -a
 ./scripts/feeds install -a
