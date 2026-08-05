@@ -63,3 +63,4 @@ echo "src-git nikki https://github.com/nikkinikki-org/OpenWrt-nikki.git;main" >>
 
 ./scripts/feeds update -i -a
 ./scripts/feeds install -a
+rm -rf feeds/nikki/mihomo-alpha
